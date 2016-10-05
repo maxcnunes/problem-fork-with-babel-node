@@ -1,0 +1,29 @@
+{
+  "name": "problem-fork-with-babel-node",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start:promise": "babel-node index.js -- --type=promise",
+    "start:async": "babel-node index.js -- --type=async",
+    "start:promise:fork-babel-node": "babel-node index.js -- --type=promise --fork-with-babel-node",
+    "start:async:fork-babel-node": "babel-node index.js -- --type=async --fork-with-babel-node",
+    "test:promise": "mocha --compilers js:babel-register test.js -- --type=promise",
+    "test:async": "mocha --compilers js:babel-register test.js -- --type=async",
+    "test:promise:fork-babel-node": "mocha --compilers js:babel-register test.js -- --type=promise --fork-with-babel-node",
+    "test:async:fork-babel-node": "mocha --compilers js:babel-register test.js -- --type=async --fork-with-babel-node"
+  },
+  "babel": {
+    "presets": ["stage-3"]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-register": "^6.16.3"
+  },
+  "devDependencies": {
+    "babel-preset-stage-3": "^6.17.0",
+    "mocha": "^3.1.0"
+  }
+}
